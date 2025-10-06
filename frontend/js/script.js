@@ -134,12 +134,14 @@ document.addEventListener('DOMContentLoaded', () => {
         displayKoiFeatures(null); // Clear features
         clearCanvas();
         drawStar();
+        
     }
 
     function resetState() {
         displayKoiFeatures(null); // Clear features
         clearCanvas();
         drawStar();
+        
     }
 
     function handleInteraction(pos) {
@@ -236,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 options: {
                     animation: false,
                     scales: {
-                        x: { title: { display: true, text: 'Fase de Tránsito' }, ticks: { display: false }, grid: { display: false } },
+                        x: { title: { display: true, text: 'Transit Phase' }, ticks: { display: false }, grid: { display: false } },
                         y: { title: { display: true, text: 'Flux' }, min: newMin, max: newMax }
                     }
                 }
@@ -246,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayKoiFeatures(features) {
         if (!features) {
-            koiFeaturesDiv.innerHTML = 'Pase el cursor sobre la estrella para simular.';
+            koiFeaturesDiv.innerHTML = 'Hover the mouse over the star to simulate.';
             return;
         }
         let featuresHtml = '';
@@ -259,4 +261,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Initial Load ---
     setup();
+
+    // Show loader while train/predict request is in progress
+    const modelsForm = document.querySelector('#models form');
+    const loaderEl = document.querySelector('#models .loader');
+    const resultPre = document.getElementById('train-result');
+    const trainBtn = document.getElementById('btn-train');
+    const predictBtn = document.getElementById('btn-predict');
 });

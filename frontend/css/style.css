@@ -300,6 +300,11 @@ input:checked + .slider:before {
     text-align: left;
 }
 
+#simulation .simulation{
+    width: 500px;
+    height: auto;
+}
+
 #simulation h2{
     font-size: 1.2rem;
     margin-bottom: 12px;
@@ -327,14 +332,14 @@ input:checked + .slider:before {
     cursor: crosshair;
 }
 #light-curve-chart{
-    width: 100% !important;
-    height: 280px !important; /* alto estable para la gráfica */
+    width: 100%;
+    height: 320px;
+    display: block; 
 }
 
 #simulation .output{
-    display: grid;
-    grid-auto-rows: min-content;
-    row-gap: 16px;
+    display: flex;
+    flex-direction: column;    /* apilar verticalment */
 }
 
 @media (max-width: 1200px){
@@ -346,4 +351,40 @@ input:checked + .slider:before {
     #simulation .container{
         grid-template-columns: 1fr; /* todo en una columna */
     }
+}
+
+#model-options{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px 12px;
+    margin-top: 8px;
+}
+
+#model-options label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: border-color .15s ease, background .15s ease;
+    cursor: pointer;
+    background: #fff;
+}
+
+#model-options label:hover{
+    border-color: #ddd;
+    background: #fafafa;
+}
+
+#model-options input[type="checkbox"],
+#model-options input[type="radio"]{
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #007bff; /* modern browsers will color checkboxes */
+}
+
+#model-options .option-text{
+    display: inline-block;
 }

@@ -59,38 +59,57 @@
                 <div id="koi-features"></div>
             </div>
         </div>
-        </section>
+    </section>
 
-        <section id="models" class="web-section hidden">
+    <section id="models" class="web-section hidden">
         <div class="container">
             <div class="controls">
-            <h2>Dataset</h2>
-
-            <form action="http://127.0.0.1:8000/api/recibir_csv"
+                <form action="http://127.0.0.1:8000/api/predict"
+                        method="post"
+                        enctype="multipart/form-data">
+                    <h2>Predict Dataset</h2>
+                    <input type="file" name="file" id="predict-csv-file" accept=".csv" required>
+                    <h2>Model</h2>
+                    <input type="hidden" name="predict-action" value="predict">
+                    <div id="model-options">
+                        <label><input type="radio" name="model_id" value="0" required><span class="option-text">Pretrained Random Forest (model 0)</span></label>
+                        <label><input type="radio" name="model_id" value="1"><span class="option-text">Pretrained CatBoost (model 1)</span></label>
+                        <label><input type="radio" name="model_id" value="2"><span class="option-text">Pretrained XGBoost (model 2)</span></label>
+                        <label><input type="radio" name="model_id" value="3"><span class="option-text">Pretrained Ensemble (model 3)</span></label>
+                    </div>
+                        
+                    <div style="margin-top:12px;">
+                    <button type="submit" id="btn-predict" name="action" value="predict">Predict</button>
+                    </div>
+                </form>
+            </div>
+            <div class="controls">
+                <form action="http://127.0.0.1:8000/api/predict"
                     method="post"
                     enctype="multipart/form-data">
-                <input type="file" name="file" id="csv-file" accept=".csv" required>
+                <h2>Train and Predict Dataset</h2>
+                <input type="file" name="file" id="train-csv-file" accept=".csv" required>
+                <h2>Models (select one or more to include in ensemble)</h2>
+                <input type="hidden" name="predict-action" value="train-predict">
+                <div id="model-options">
+                    <label><input type="checkbox" name="model_id" value="rf"><span class="option-text">Random Forest</span></label>
+                    <label><input type="checkbox" name="model_id" value="cat"><span class="option-text">CatBoost</span></label>
+                    <label><input type="checkbox" name="model_id" value="xgb"><span class="option-text">XGBoost</span></label>
+                    <label><input type="checkbox" name="model_id" value="lgb"><span class="option-text">LightGBM</span></label>
+                    <label><input type="checkbox" name="model_id" value="svc"><span class="option-text">SVM</span></label>
+                    <label><input type="checkbox" name="model_id" value="nb"><span class="option-text">Gaussian Naive Bayes</span></label>
+                    <label><input type="checkbox" name="model_id" value="lr"><span class="option-text">Logistic Regression</span></label>
+                    <label><input type="checkbox" name="model_id" value="knn"><span class="option-text">KNN Classifier</span></label>
+                </div>
 
-                <h2>Modelo</h2>
-                <select name="model_id" id="model-type" required>
-                <option value="0">Random Forest</option>
-                <option value="1">CatBoost</option>
-                <option value="2">XGBoost</option>
-                <option value="3">Ensemble (RF + NB + LGBM + SVC)</option>
-                </select>
 
                 <div style="margin-top:12px;">
-                <button type="submit" id="btn-train">Entrenar</button>
+                <button type="submit" id="btn-train-predict" name="action" value="train-predict">Train & Predict</button>
                 </div>
             </form>
-            </div>
-
-            <div class="output">
-            <h2>Resultados</h2>
-            <pre id="train-result">—</pre>
-            </div>
         </div>
-        </section>
+    </div>
+    </section>
 
 
 

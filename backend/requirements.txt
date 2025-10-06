@@ -5,3 +5,7 @@ scipy
 pandas
 pydantic
 python-multipart
+scikit-learn==1.7.2
+catboost
+xgboost
+lightgbm
