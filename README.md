@@ -1,44 +1,56 @@
-# ExoFinder
+# 🌌 ExoFinder
 
-**Summary**  
-ExoFinder is a web application that allows users, scientists, and enthusiasts to explore new exoplanet datasets through interactive visualizations of exoplanets detected by machine learning models. It is designed to be user-friendly while including advanced features for more experienced users.
+**✨ Summary**  
+ExoFinder is a **web application** that lets users, scientists, and space enthusiasts explore **new exoplanet datasets** through **interactive visualizations** of exoplanets detected by ML models. User-friendly for beginners, yet powerful for advanced users! 🚀
 
-**Project Demonstration**  
-[Demo Video](https://uab-my.sharepoint.com/:b:/g/personal/1666599_uab_cat/EboaFGqA9qlGqMImbE3pEZUBfxQfT-acZaVm0mrCXpjg-A?e=xXaBjB)
+**🎥 Project Demo**  
+[Watch Demo](https://uab-my.sharepoint.com/:b:/g/personal/1666599_uab_cat/EboaFGqA9qlGqMImbE3pEZUBfxQfT-acZaVm0mrCXpjg-A?e=xXaBjB)
 
-**Project Repository**  
+**💻 Repository**  
 [GitHub](https://github.com/0x4UAB-2/NASA_SPACE_CHALLENGE-2025)
 
-## Project Details
+---
 
-ExoFinder simulates the **Transit Method** used in astrophysics to detect exoplanets via machine learning. The application allows users to adjust stellar and planetary parameters—such as radius, mass, orbital period, and temperature—and observe how an exoplanet transits across its star in real time. During the transit, the system calculates the drop in observed flux and generates a dynamic **light curve** using Chart.js.
+## 🔭 Project Details
 
-The simulation also extracts scientifically relevant features, including:
-- Impact parameter
-- Planet-to-star radius ratio
-- Equilibrium temperature  
+ExoFinder **simulates the Transit Method** used in astrophysics to detect exoplanets using machine learning.  
 
-These features are displayed in a **KOI (Kepler Object of Interest) style** and can be used for ML classification in the second phase using models like **Random Forest, CatBoost, XGBoost**, and ensemble methods.
+**Key Features:**  
+- 🌟 Adjust **stellar & planetary parameters**: radius, mass, orbital period, temperature  
+- 📈 Visualize **real-time light curves** as planets transit stars (using **Chart.js**)  
+- 🪐 Extract scientific features:  
+  - Impact parameter  
+  - Planet-to-star radius ratio  
+  - Equilibrium temperature  
+- 🎛️ Interactive control: planets appear on **hover**, noise toggle for telescope simulation  
 
-The frontend is developed with **HTML, CSS, and JavaScript**, following a modular structure separating UI handling and astrophysical calculations. A key interactive feature is that the exoplanet appears only when the user hovers over the star, providing an intuitive understanding of transit geometry. Noise can also be toggled on/off to simulate real telescope observations.
+**ML Integration:**  
+- Datasets can be processed for classification with **Random Forest, CatBoost, XGBoost**, and ensemble models.  
+- Designed for **education and research prototyping**.  
 
-**Use Cases**
-- Educational: understand exoplanetary transits and light curves.
-- Research prototyping: simulate features for machine learning applications in exoplanet detection.
+---
 
-## Use of Artificial Intelligence
+## 🤖 Use of AI
 
-Limited AI tools were used to accelerate development efficiency:
-- AI code assistants (e.g., ChatGPT/Gemini) helped generate small UI interaction snippets and frontend logic.
-- No AI-generated images, videos, audio, or datasets were used; all media elements are copyright-free.
-- All scientific calculations and simulations were manually implemented and verified.  
+- 🛠️ AI assistants (ChatGPT/Gemini) helped with **small frontend code snippets** and UI logic  
+- 🚫 No AI-generated images, audio, video, or datasets were used  
+- ✅ All scientific formulas and simulations were manually implemented and **verified by the team**  
 
-All AI-generated code suggestions were reviewed, adapted, and validated by the team to ensure correctness and originality.
+---
 
-## Technologies Used
+## 🛠️ Technologies Used
+
 - **Frontend:** HTML, CSS, JavaScript, Chart.js  
-- **Machine Learning:** Python, Random Forest, CatBoost, XGBoost  
+- **ML:** Python, Random Forest, CatBoost, XGBoost  
 - **Visualization:** Interactive light curves, KOI-style metrics  
+
+---
+
+## 🎯 Why ExoFinder is Cool
+
+- Makes exoplanet science **accessible and interactive** for everyone  
+- Bridges **education and ML research** with real-time simulations  
+- Hands-on way to **understand how exoplanet signals are formed**  
 
 ---
 
